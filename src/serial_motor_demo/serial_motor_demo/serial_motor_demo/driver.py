@@ -72,7 +72,7 @@ class MotorDriver(Node):
     
 
     def send_feedback_motor_command(self, mot_1_radsec):
-        self.send_command(f"t {int(mot_1_radsec)}")
+        self.send_command(f"t {float(mot_1_radsec)}")
 
     def send_encoder_read_command(self):
         resp = self.send_command(f"a")
