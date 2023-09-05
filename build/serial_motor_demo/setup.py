@@ -1,1 +1,0 @@
-/home/jani/rosdev/Janabot/src/serial_motor_demo/serial_motor_demo/setup.py
