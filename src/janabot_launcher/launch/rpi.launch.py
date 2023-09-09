@@ -30,5 +30,6 @@ def generate_launch_description():
     )
 
     ld.add_action(motor1_node)
+    ld.add_action(motor2_node)
 
     return ld
