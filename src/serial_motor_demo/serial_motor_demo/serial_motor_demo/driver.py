@@ -18,11 +18,6 @@ class MotorDriver(Node):
 
         # Setup parameters
 
-        self.declare_parameter('encoder_cpr', value=0)
-        if (self.get_parameter('encoder_cpr').value == 0):
-            print("WARNING! ENCODER CPR SET TO 0!!")
-
-
         self.declare_parameter('serial_port', value="/dev/ttyUSB0")
         self.serial_port = self.get_parameter('serial_port').value
 
@@ -49,11 +44,8 @@ class MotorDriver(Node):
 
         # Member Variables
 
-        self.last_enc_read_time = time.time()
         self.last_m1_enc = 0
-        self.last_m2_enc = 0
         self.m1_spd = 0.0
-        self.m2_spd = 0.0
 
         self.mutex = Lock()
 
