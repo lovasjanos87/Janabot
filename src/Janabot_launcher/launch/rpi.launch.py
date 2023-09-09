@@ -1,7 +1,7 @@
 from launch import LaunchDescription
 from launch_ros.actions import Node
 
-def generate_launch_desription():
+def generate_launch_description():
     ld = LaunchDescription()
 
     motor1_node = Node(
@@ -24,7 +24,7 @@ def generate_launch_desription():
         executable="driver",
         name="motor2",
         parameters=[
-            {"serial_port": "/dev/ttyUSB-arduino1.1.4"}
+            {"serial_port": "/dev/ttyUSB-arduino1.1.3"}
         ]
 
     )
